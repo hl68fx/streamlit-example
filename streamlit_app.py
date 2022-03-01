@@ -36,3 +36,18 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+    
+    
+import streamlit as st
+from pymongo import MongoClient
+
+#Display title for streamlit app
+st.title("Choose your toppings and crust type!")
+#Multiselect widget in app
+pizza_dough = st.multiselect(
+    'Which spices do you love to cook with?',
+    ('Thin Crust', 'Regular Crust', 'Thick Crust'))
+toppings = st.multiselect(
+    'What toppings do you want?',
+    ('Beef','Chicken','Tofu'))
+
