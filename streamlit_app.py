@@ -38,8 +38,6 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
     
     
-import streamlit as st
-from pymongo import MongoClient
 
 #Display title for streamlit app
 st.title("Choose your toppings and crust type!")
